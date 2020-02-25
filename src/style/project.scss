@@ -1,0 +1,11 @@
+@import './config.scss';
+
+.project {
+  &-item {
+    h3 {
+      background-color: $itemHeaderColor;
+      padding: 10px 0;
+    }
+    padding-bottom: 10px;
+  }
+}
