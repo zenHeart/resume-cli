@@ -1,16 +1,13 @@
 import React from 'react';
-import ItemLabel from './ItemLabel';
 import Level from './Level';
 
 export default Skill;
 
 const SkillItem = (item: SkillItem) => (
   <li className="skill-item">
-    <p>
-      <ItemLabel text={item.skillName}></ItemLabel>
-      <span>{item.skillDescription}</span>
-      <Level level={item.skillLevel}></Level>
-    </p>
+    <strong>{item.name}</strong>
+    <span>{item.description}</span>
+    <Level level={item.level}></Level>
   </li>
 );
 
@@ -20,7 +17,7 @@ function Skill(props: ResumeSection<SkillItem>) {
       <h2>{props.text}</h2>
       <ul>
         {props.items.map(el => (
-          <SkillItem key={el.skillName} {...el}></SkillItem>
+          <SkillItem key={el.name} {...el}></SkillItem>
         ))}
       </ul>
     </section>

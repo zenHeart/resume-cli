@@ -6,16 +6,16 @@ export default Experience;
 const ExperienceItem = (item: ExperienceItem) => (
   <li className="experience-item">
     <h3>
-      <span>{item.timePeriod}</span>
+      <span>{item.period}</span>
       <span>{item.company}</span>
     </h3>
     <p>
       <ItemLabel text="工作职位:"></ItemLabel>
-      {item.jobTile}
+      {item.title}
     </p>
     <p>
       <ItemLabel text="工作内容:"></ItemLabel>
-      {item.jobDescription}
+      {item.description}
     </p>
   </li>
 );

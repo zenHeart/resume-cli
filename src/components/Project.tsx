@@ -6,20 +6,20 @@ export default Project;
 const ProjectItem = (item: ProjectItem) => (
   <li className="project-item">
     <h3>
-      <span>{item.timePeriod}</span>
-      <span>{item.projectName}</span>
+      <span>{item.period}</span>
+      <span>{item.name}</span>
     </h3>
     <p>
       <ItemLabel text="项目描述:"></ItemLabel>
-      {item.projectDescription}
+      {item.description}
     </p>
     <p>
       <ItemLabel text="项目职责:"></ItemLabel>
-      {item.projectDuty}
+      {item.duty}
     </p>
     <p>
       <ItemLabel text="项目业绩:"></ItemLabel>
-      {item.projectPerformance}
+      {item.performance}
     </p>
   </li>
 );
@@ -30,7 +30,7 @@ function Project(props: ResumeSection<ProjectItem>) {
       <h2>{props.text}</h2>
       <ul>
         {props.items.map(el => (
-          <ProjectItem key={el.projectName} {...el}></ProjectItem>
+          <ProjectItem key={el.name} {...el}></ProjectItem>
         ))}
       </ul>
     </section>

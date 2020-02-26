@@ -1,1 +1,29 @@
+.skill {
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed $borderColor;
 
+    > :nth-child(odd) {
+      flex: 0 0 120px;
+    }
+    > :nth-child(even) {
+      flex: 1;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  @media (max-width: $MQMobile) {
+    .skill-item {
+      padding-bottom: 0;
+      border-bottom: none;
+
+      > :nth-child(even) {
+        display: none;
+      }
+    }
+  }
+}

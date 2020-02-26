@@ -1,12 +1,15 @@
 import React from 'react';
+import './Level.scss';
 
 export default Level;
 
 function Level(props: { level: number }) {
   return (
-    <span>
+    <span className="level">
       {Array.from({ length: props.level }).map((ele, index) => (
-        <span key="index">⭐</span>
+        <span className="star" key={index}>
+          ⭐
+        </span>
       ))}
     </span>
   );

@@ -1,25 +1,29 @@
 interface Profile {
   name: string;
   email: string;
+  avatar?: string;
+  workingYears?: string;
+  school?: string;
+  state?: string;
 }
 interface ExperienceItem {
-  timePeriod: [number, number];
+  period: [number, number];
   company: string;
-  jobTile: string;
-  jobDescription: string;
+  title: string;
+  description: string;
 }
 interface ProjectItem {
-  timePeriod: [number, number];
-  projectName: string;
-  projectDescription: string;
-  projectDuty: string;
-  projectPerformance: string;
+  period: [number, number];
+  name: string;
+  description: string;
+  duty: string;
+  performance: string;
 }
 
 interface SkillItem {
-  skillName: string;
-  skillDescription: string;
-  skillLevel: number;
+  name: string;
+  description: string;
+  level: number;
 }
 
 interface Resume {
