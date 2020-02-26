@@ -7,6 +7,7 @@
   "keywords": [],
   "scripts": {
     "build": "webpack -p",
+    "deploy": "./script/deploy.sh",
     "start": "webpack-dev-server -d --content-base ./public"
   },
   "dependencies": {
