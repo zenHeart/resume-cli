@@ -6,14 +6,15 @@
   "author": "zenheart <zenheart_register@163.com> (https://blog.zenheart.site/)",
   "keywords": [],
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack -p ",
     "deploy": "./script/deploy.sh",
-    "start": "webpack-dev-server -d --content-base ./public"
+    "start": "webpack-dev-server --host 0.0.0.0 -d --content-base ./public "
   },
   "dependencies": {
     "@types/react": "^16.9.22",
     "@types/react-dom": "^16.9.5",
     "clean-webpack-plugin": "^3.0.0",
+    "dayjs": "^1.8.21",
     "html-webpack-plugin": "^3.2.0",
     "mockjs": "^1.1.0",
     "react": "^16.12.0",
