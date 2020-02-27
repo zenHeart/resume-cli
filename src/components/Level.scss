@@ -1,7 +1,16 @@
 .level {
   text-align: left;
+  position: relative;
   .star {
     font-size: 14px;
     padding-left: 5px;
+  }
+  &-tip {
+    border-radius: 5px;
+    padding: 5px;
+    left: 0;
+    bottom: 20px;
+    background: #efefef;
+    position: absolute;
   }
 }

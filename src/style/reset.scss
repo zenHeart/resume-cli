@@ -1,6 +1,8 @@
+html,
 body {
   padding: 0;
   margin: 0;
+  color: $textColor;
 }
 ol,
 ul {
@@ -9,7 +11,25 @@ ul {
   padding: 0;
 }
 
-section {
-  padding-bottom: 10px;
-  border-bottom: 3px solid $borderColor;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $accentColor;
+}
+
+strong {
+  font-weight: 600;
+  color: $accentColor;
+}
+
+a {
+  font-weight: 500;
+  color: $accentColor;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }

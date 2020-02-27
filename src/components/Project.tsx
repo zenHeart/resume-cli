@@ -1,26 +1,17 @@
 import React from 'react';
-import ItemLabel from './ItemLabel';
+import Piece from './Piece';
+import Period from './Period';
+
+import './Project.scss';
 
 export default Project;
 
 const ProjectItem = (item: ProjectItem) => (
   <li className="project-item">
-    <h3>
-      <span>{item.period}</span>
-      <span>{item.name}</span>
-    </h3>
-    <p>
-      <ItemLabel text="项目描述:"></ItemLabel>
-      {item.description}
-    </p>
-    <p>
-      <ItemLabel text="项目职责:"></ItemLabel>
-      {item.duty}
-    </p>
-    <p>
-      <ItemLabel text="项目业绩:"></ItemLabel>
-      {item.performance}
-    </p>
+    <Period title={item.name} period={item.period}></Period>
+    <Piece name="项目描述:" content={item.description}></Piece>
+    <Piece name="项目职责:" content={item.duty}></Piece>
+    <Piece name="项目业绩:" content={item.performance}></Piece>
   </li>
 );
 

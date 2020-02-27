@@ -1,0 +1,13 @@
+@import '../style/config.scss';
+
+.piece {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+  line-height: 1.7;
+  &-label {
+    flex: 0 0 6rem;
+    font-weight: 600;
+    color: $accentColor;
+  }
+}

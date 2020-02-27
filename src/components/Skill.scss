@@ -1,3 +1,7 @@
+@import '../style/config.scss';
+
+$skillNameWidth: 5rem;
+
 .skill {
   &-item {
     display: flex;
@@ -5,13 +9,19 @@
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px dashed $borderColor;
+    line-height: 1.5;
 
-    > :nth-child(odd) {
+    &-name {
+      flex: 0 0 $skillNameWidth;
+    }
+    &-description {
+      flex: 1;
+      padding: 0 1rem;
+    }
+    .level {
       flex: 0 0 120px;
     }
-    > :nth-child(even) {
-      flex: 1;
-    }
+
     &:last-child {
       border-bottom: none;
     }

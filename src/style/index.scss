@@ -1,17 +1,18 @@
-@import './config.scss';
+@import 'config.scss';
 @import 'reset.scss';
-@import 'common.scss';
 
-@import 'profile.scss';
-@import 'experience.scss';
-@import 'project.scss';
-@import 'skill.scss';
-
-.app {
+.resume {
   max-width: $contentWidth;
   margin: 0 auto;
   padding: 2rem;
   @media (max-width: $MQMobileNarrow) {
     padding: 1.5rem;
+  }
+}
+
+.resume {
+  section {
+    padding-bottom: 10px;
+    border-bottom: 3px solid $borderColor;
   }
 }

@@ -1,22 +1,16 @@
 import React from 'react';
-import ItemLabel from './ItemLabel';
+import Piece from './Piece';
+import Period from './Period';
+
+import './experience.scss';
 
 export default Experience;
 
 const ExperienceItem = (item: ExperienceItem) => (
   <li className="experience-item">
-    <h3>
-      <span>{item.period}</span>
-      <span>{item.company}</span>
-    </h3>
-    <p>
-      <ItemLabel text="工作职位:"></ItemLabel>
-      {item.title}
-    </p>
-    <p>
-      <ItemLabel text="工作内容:"></ItemLabel>
-      {item.description}
-    </p>
+    <Period title={item.company} period={item.period}></Period>
+    <Piece name="工作职位:" content={item.title}></Piece>
+    <Piece name="工作内容:" content={item.description}></Piece>
   </li>
 );
 

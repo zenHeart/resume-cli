@@ -1,12 +1,13 @@
 import React from 'react';
 import Level from './Level';
+import './Skill.scss';
 
 export default Skill;
 
 const SkillItem = (item: SkillItem) => (
   <li className="skill-item">
-    <strong>{item.name}</strong>
-    <span>{item.description}</span>
+    <strong className="skill-item-name">{item.name}</strong>
+    <p className="skill-item-description">{item.description}</p>
     <Level level={item.level}></Level>
   </li>
 );
