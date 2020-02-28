@@ -7,3 +7,4 @@ todos:
 backlog:
     ☐ 设置打印时的样式
     ☐ 添加编辑器配置简历的功能
+    ☐ 嵌入 craft.js https://github.com/prevwong/craft.js 来编辑简历

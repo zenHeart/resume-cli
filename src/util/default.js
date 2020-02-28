@@ -45,17 +45,14 @@ const resume = Mock.mock({
           performance: '@csentence(20,100)'
         },
         {
-          period: [new Date('2019').getTime(), new Date('2018 06').getTime()],
+          period: [new Date('2019').getTime(), new Date('2018').getTime()],
           name: '项目 2',
           description: '@csentence(20,100)',
           duty: '@csentence(20,100)',
           performance: '@csentence(20,100)'
         },
         {
-          period: [
-            new Date('2018 06').getTime(),
-            new Date('2015 05').getTime()
-          ],
+          period: [new Date('2018').getTime(), new Date('2015').getTime()],
           name: '项目 3',
           description: '@csentence(20,100)',
           duty: '@csentence(20,100)',
