@@ -6,23 +6,31 @@
   "author": "zenheart <zenheart_register@163.com> (https://blog.zenheart.site/)",
   "keywords": [],
   "scripts": {
-    "build": "webpack -p",
-    "start": "webpack-dev-server -d --content-base ./public"
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
+    "test": "npm run build && node --test test/*.test.cjs"
   },
   "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
     "@types/react": "^16.9.22",
     "@types/react-dom": "^16.9.5",
-    "clean-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mockjs": "^1.1.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "sass-loader": "^8.0.2",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.8.2",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "css-loader": "7.1.5",
+    "html-webpack-plugin": "5.6.8",
+    "jsdom": "30.1.3",
+    "mini-css-extract-plugin": "2.10.2",
+    "sass": "1.107.0",
+    "sass-loader": "17.1.0",
+    "ts-loader": "9.6.2",
+    "typescript": "5.9.3",
+    "webpack": "5.112.2",
+    "webpack-cli": "7.2.3",
+    "webpack-dev-server": "6.1.0"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   },
   "license": "ISC"
 }
