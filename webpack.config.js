@@ -1,4 +1,3 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -7,19 +6,21 @@ const path = require('path');
 module.exports = {
   entry: './src/app/app.tsx',
   plugins: [
-    new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ['public/build']
-    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/templates/index.html')
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[hash:6].css'
+      filename: 'css/[name].[contenthash:6].css'
     })
   ],
   output: {
     path: __dirname + '/public',
-    filename: 'build/[name].[contenthash].js'
+    filename: 'build/[name].[contenthash].js',
+    clean: true
+  },
+  devServer: {
+    static: path.join(__dirname, 'public'),
+    host: '127.0.0.1'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
